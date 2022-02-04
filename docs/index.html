@@ -1,43 +1,27 @@
-<html>
-<br>
-<style type="text/css">
-    .text {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-</style>
-<div id="Language" class="text" style="color: #0000ff">
-    <u>中文/English</u></div>
-<br>
-<div id="Chinese" class="text" style="display:block">
-    <br>我的名字是Yon
-    <br>2020年，我在江南大学获得了数字媒体技术学士学位。
-    <br>2020-2021年，我在北京一家名为云畅游戏的公司，参与制作了鬼泣手游，我负责技术美术方面的工作。
-    <br>2021-2022年，我在深圳一家名为腾讯的公司，参与制作一款开放世界手游，同样负责技术美术方面的工作。
+<html lang="en">
 
-</div>
-<div id="English" class="text" style="display:none">请叫我第二层</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="init()">
+    <br>
+    <div id="Language" style="color: #0000ff">
+        <u>中文/English</u></div>
+    <br>
+    <div id="SelfIntroduce">
+
+    <!-- </div>
+    <div id="English" style="display:none">请叫我第二层</div> -->
 
 
-<script type='text/javascript'>
-    function show_hidden(obj) {
-        if (obj.style.display == 'block') {
-            obj.style.display = 'none';
-        } else {
-            obj.style.display = 'block';
-        }
-    }
+    <script src="main.js"></script>
 
-    var sh = document.getElementById("Language");
-    sh.onclick = function() {
-        var Chinese = document.getElementById("Chinese");
-        var English = document.getElementById("English");
-        show_hidden(Chinese);
-        show_hidden(English);
-        return false;
-    }
-</script>
+</body>
 
 </html>

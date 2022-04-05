@@ -5,17 +5,26 @@
     "private": "true",
     "scripts": {
         "dev": "webpack serve --open",
-        "build": "webpack"
+        "build": "webpack",
+        "deploy": "vercel --prod"
     },
     "keywords": [],
     "author": "Yon <jungleorange7@outlook.com> (http://www.yon.pub/)",
     "devDependencies": {
+        "cannon": "^0.6.2",
+        "copy-webpack-plugin": "^10.2.4",
         "css-loader": "^6.6.0",
+        "dat.gui": "^0.7.9",
+        "gsap": "^3.9.1",
         "html-webpack-plugin": "^5.5.0",
+        "raw-loader": "^4.0.2",
         "style-loader": "^3.3.1",
         "three": "^0.137.5",
         "webpack": "^5.69.1",
         "webpack-cli": "^4.9.2",
         "webpack-dev-server": "^4.7.4"
+    },
+    "dependencies": {
+        "vercel": "^24.0.0"
     }
 }

@@ -1,69 +1,89 @@
-const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-
+const webpack = require('webpack')
+const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CopyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = {
     entry: {
-        index: './src/index.js',
-        renderer: './src/Canvas.js',
+        index: "./src/index.js",
+        explore: "./src/explore.js",
     },
     output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'docs'),
+        filename: "[name].[contenthash].js",
+        path: path.resolve(__dirname, "docs"),
         clean: true,
     },
     module: {
-        rules: [{
+        rules: [
+            {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: ["style-loader", "css-loader"],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
+                type: "asset/resource",
             },
             {
-                test:/\.(glsl|vs|fs|vert|frag)$/, 
-                exclude:/node_modules/,
-                use:[
-                    'raw-loader'
-                ]
-            }
+                test: /\.(glsl|vs|fs|vert|frag)$/,
+                exclude: /node_modules/,
+                use: ["raw-loader"],
+            },
+            {
+                test: /\.(txt)$/,
+                use: ["raw-loader"],
+            },
+            {
+                test: /\.(webp)$/,
+                use: ["raw-loader"],
+            },
         ],
     },
 
-    stats: 'errors-warnings',
+    stats: "errors-warnings",
     mode: "development",
-    devtool: 'inline-source-map',
+    devtool: "inline-source-map",
     devServer: {
-        watchFiles: ['src/**', 'static/**'],
+        watchFiles: ["src/**", "static/**"],
         static: {
             watch: true,
-            directory: path.join(__dirname, '../static')
+            directory: path.join(__dirname, "./static"),
         },
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Yon',
-            minify: true,
+            title: "main",
+            chunks: ["index"],
+            minify: "auto",
+        }),
+        new HtmlWebpackPlugin({
+            title: "explore",
+            filename: "explore/index.html",
+            chunks: ["explore"],
+            minify: "auto",
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: path.resolve(__dirname, './static') }
-            ]
+                {
+                    from: path.resolve(__dirname, "./static"),
+                    to: "static/",
+                },
+            ],
         }),
+        new webpack.ProvidePlugin({
+            $: 'jquery'
+          }),
     ],
     optimization: {
-        moduleIds: 'deterministic',
-        runtimeChunk: 'single',
+        moduleIds: "deterministic",
+        runtimeChunk: "single",
         splitChunks: {
             cacheGroups: {
                 vendor: {
                     test: /[\\/]node_modules[\\/]/,
-                    name: 'vendors',
-                    chunks: 'all',
+                    name: "vendors",
+                    chunks: "all",
                 },
             },
         },
     },
-};
+}

@@ -1,0 +1,34 @@
+{
+    "language": "中文/English",
+    "chinese": {
+        "word": [
+            "Auther: Yon",
+
+            "2022-04-04",
+            "BetaVersion 1.0",
+            "# Copyright © 2021-2022 Yiyong Jiang. All rights reserved.",
+            "",
+            "Project: Gone",
+            "",
+            "RoadMap:",
+            "设计选择地区后的交互模式",
+            "移动端交互改为移动",
+            "优化图片资源的大小",
+            "近处视角下地图分块加载",
+            "增加右键相机旋转后松开自动回到默认角度",
+            "增加地图周边区域",
+            "优化滚轮缩放平滑",
+            "优化缩放比例",
+            "删去环境反射球,并增加环境球谐",
+            "",
+            "Done!",
+            "Helper移动至Debug.js下",
+            "增加地图上区域选择触发"
+        ]
+    },
+    "english": {
+        "word": [
+            "Need to be improved"
+        ]
+    }
+}

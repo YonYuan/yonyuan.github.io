@@ -1,0 +1,52 @@
+{
+    "id": "Suzanne",
+    "title": "Desert",
+    "description": "The memory about the scar on somebody's face.",
+    "background": "desert.webp",
+
+    "block": [
+        {
+            "name": "Desert Killer",
+            "description": "I can't bear to think of him waiting in the room knowing he's going to die.  It's fucking horrible.",
+            "type": "gallery",
+            "src": [
+                {
+                    "path": "yuqinyang.webp",
+                    "name": "yuqinyang",
+                    "description": "The taoist of the Autumn Pool."
+                },
+                {
+                    "path": "xiaojue.webp",
+                    "name": "xiaojue",
+                    "description": "The little girl saved from the bandits."
+                },
+                {
+                    "path": "desert.webp",
+                    "name": "desert",
+                    "description": "The little girl saved from the bandits."
+                }
+            ]
+        },
+        {
+            "name": "Hope at least",
+            "description": "--the gone of wind",
+            "type": "story",
+            "src": [
+                {
+                    "path": "desert.txt",
+                    "banner": "xiaojue.webp",
+                    "name": "Desert",
+                    "author": "Yon",
+                    "description": "A man can be destroyed but not defeated"
+                },
+                {
+                    "path": "whiteforest.txt",
+                    "banner": "desert.webp",
+                    "name": "White Forest",
+                    "author": "Yon",
+                    "description": "Slowly, She turned her head and looked under her ass. It seemed to be a corpse, the corpse of someone who was about to die."
+                }
+            ]
+        }
+    ]
+}

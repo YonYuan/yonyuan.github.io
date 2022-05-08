@@ -1,0 +1,22 @@
+{
+    "id": "fox",
+    "title": "Fox",
+    "description": "The memory about the scar on somebody's face.",
+    "background": "fox.webp",
+    "block": [
+        {
+            "name": "Desert Killer",
+            "description": "I can't bear to think of him waiting in the room knowing he's going to die.  It's fucking horrible.",
+            "type": "gallery",
+            "src": [
+            ]
+        },
+        {
+            "name": "Hope at least",
+            "description": "--the gone of wind",
+            "type": "story",
+            "src": [
+            ]
+        }
+    ]
+}

@@ -29,11 +29,11 @@ export default class Environment {
             0xffffff,
             directionalLightIntensity
         )
-        this.sunLight.position.set(-4, 4, 4)
+        this.sunLight.position.set(-40, 40, 40)
         this.sunLight.castShadow = true
-        this.sunLight.shadow.camera.far = 15
-        this.sunLight.shadow.mapSize.width = 512
-        this.sunLight.shadow.mapSize.height = 512
+        // this.sunLight.shadow.camera.far = 15
+        // this.sunLight.shadow.mapSize.width = 512
+        // this.sunLight.shadow.mapSize.height = 512
 
         this.scene.add(this.sunLight)
 

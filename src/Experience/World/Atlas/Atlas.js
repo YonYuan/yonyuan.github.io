@@ -14,6 +14,7 @@ export default class Atlas {
         this.resources = this.experience.resources
         this.time = this.experience.time
         this.debug = this.experience.debug
+        this.caster = this.experience.caster
 
         if (this.debug.active) {
             this.debugFolder = this.debug.ui.addFolder("Atlas")
@@ -23,6 +24,8 @@ export default class Atlas {
         this.setTextures()
         this.setMaterial()
         this.setMesh()
+        
+        this.caster.register(this)
     }
 
     setGeometry() {
@@ -67,11 +70,17 @@ export default class Atlas {
         this.material.normalScale = new THREE.Vector2(0.3, 0.3)
     }
     setMesh() {
-        this.mesh = new THREE.Mesh(this.geometry, this.material)
-        this.mesh.rotation.x = -Math.PI * 0.5
-        this.mesh.receiveShadow = true
-        this.scene.add(this.mesh)
+        this.model = new THREE.Mesh(this.geometry, this.material)
+        this.model.name = "atlas"
+
+        this.model.rotation.x = -Math.PI * 0.5
+        this.model.receiveShadow = true
+        this.scene.add(this.model)
     }
+
+    click(){
+    }
+
 
     update() {}
 }

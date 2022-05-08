@@ -7,11 +7,16 @@ import * as THREE from "three"
 
 import Camera from "./Camera"
 import Renderer from "./Renderer"
-import Sizes from "./Utils/Sizes"
-import Time from "./Utils/Time"
+import Caster from "./Caster"
+
 import World from "./World/World"
-import Debug from "./Utils/Debug"
-import Resources from "./Utils/Resources"
+
+import Sizes from "../Utils/Sizes"
+import Time from "../Utils/Time"
+import Cursor from "../Utils/Cursor"
+import Debug from "../Utils/Debug"
+import Resources from "../Utils/Resources"
+
 import sources from './sources'
 
 let instance = null
@@ -26,15 +31,20 @@ export default class Experience {
 
         window.experience = this
 
+        this.eCanvas = canvas.eCanvas
         this.canvas = canvas
 
         this.debug = new Debug()
         this.sizes = new Sizes()
         this.time = new Time()
+        this.cursor = new Cursor()
+
         this.scene = new THREE.Scene()
         this.resources = new Resources(sources)
         this.camera = new Camera()
+        this.caster = new Caster()
         this.renderer = new Renderer()
+
         this.world = new World()
 
         this.sizes.on("resize", () => {
@@ -43,6 +53,14 @@ export default class Experience {
 
         this.time.on("tick", () => {
             this.update()
+        })
+
+        this.cursor.on("move",()=>{
+            this.move()
+        })
+
+        this.cursor.on("click",()=>{
+            this.click()
         })
     }
 
@@ -55,6 +73,14 @@ export default class Experience {
         this.camera.update()
         this.world.update()
         this.renderer.update()
+    }
+
+    move(){
+        this.caster.rayMove()
+    }
+
+    click(){
+        this.caster.rayClick()
     }
 
     destroy() {

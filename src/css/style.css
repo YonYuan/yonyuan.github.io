@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.webgl {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+}
+
+body {
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+}
+
+.text {
+    top: 0;
+    left: 0;
+    color: #ffffff;
+    font-size: 6px;
+    position: relative;
+    text-align: right;
+    pointer-events: none;
+}
+
+#language {
+    color: #ffffff;
+    text-align: right;
+    text-decoration: underline;
+    position: relative;
+}
+
+.region {
+    background: rgb(35, 31, 34);
+    border-radius: 8px;
+    width: calc(100% - 100px);
+    height: 120px;
+    max-width: 300px;
+    padding: 34px 30px 17px;
+
+    color: #ffffff;
+
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 16px;
+
+    position: fixed;
+    top: auto;
+    right: auto;
+    bottom: 10%;
+    left: 5%;
+  
+}
+
+.regionTitle{
+    font-size: 24px;
+    letter-spacing:8px;
+}
+
+.regionDescription{
+    font-size: 12px;
+    letter-spacing:1px;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+.discover{
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 12%;
+    left: -2%;
+
+    background-color: #ffffff;
+    border-radius: 4px;
+    color: rgb(21, 0, 156);
+    padding: 5px 3px 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing:2px;
+    cursor: pointer;
+}
+

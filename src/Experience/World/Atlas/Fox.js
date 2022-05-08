@@ -13,19 +13,24 @@ export default class Fox {
         this.resources = this.experience.resources
         this.time = this.experience.time
         this.debug = this.experience.debug
+        this.caster = this.experience.caster
 
         if (this.debug.active) {
             this.debugFolder = this.debug.ui.addFolder("fox")
         }
 
-        this.resource = this.resources.items.foxModel
+        this.resource = this.resources.items.fox
+
 
         this.setModel()
         this.setAnimation()
+        this.caster.register(this)
+    
     }
 
     setModel() {
         this.model = this.resource.scene
+        this.model.name = "fox"
         this.model.scale.set(0.02, 0.02, 0.02)
         this.scene.add(this.model)
 
@@ -87,6 +92,8 @@ export default class Fox {
             this.debugFolder.add(debugObject,'playRunning')
         }
     }
+
+
 
     update() {
         this.animation.mixer.update(this.time.delta * 0.001)

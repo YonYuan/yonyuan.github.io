@@ -20,9 +20,14 @@ export default [
 
 
     {
-        name: "foxModel",
+        name: "fox",
         type: "gltfModel",
         path: "models/Fox/glTF/Fox.gltf",
+    },
+    {
+        name: "monkey",
+        type: "gltfModel",
+        path: "models/Monkey/Monkey.gltf",
     },
 
     {

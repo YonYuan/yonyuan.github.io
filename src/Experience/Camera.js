@@ -14,7 +14,7 @@ export default class Camera {
         this.experience = new Experience()
         this.sizes = this.experience.sizes
         this.scene = this.experience.scene
-        this.canvas = this.experience.canvas
+        this.eCanvas = this.experience.eCanvas
 
         this.setInstance()
         this.setOrbitControl()
@@ -32,7 +32,7 @@ export default class Camera {
     }
 
     setOrbitControl() {
-        this.controls = new OrbitControls(this.instance, this.canvas)
+        this.controls = new OrbitControls(this.instance, this.eCanvas)
         this.controls.enableDamping = true
         this.controls.dampingFactor = 0.2
         this.controls.screenSpacePanning = false

@@ -12,6 +12,7 @@ module.exports = {
         filename: "[name].[contenthash].js",
         path: path.resolve(__dirname, "docs"),
         clean: true,
+        
     },
     module: {
         rules: [
@@ -46,7 +47,7 @@ module.exports = {
         watchFiles: ["src/**", "static/**"],
         static: {
             watch: true,
-            directory: path.join(__dirname, "./static"),
+            directory: path.join(__dirname, "../yonyuan.github.io/static"),
         },
     },
     plugins: [
@@ -64,8 +65,12 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, "./static"),
-                    to: "static/",
+                    from: path.resolve(__dirname, "../yonyuan.github.io/static"),
+                    to:  path.resolve(__dirname, "../yonyuan.github.io/docs/static"),
+                },
+                {
+                    from:path.resolve(__dirname, "../yonyuan.github.io/CNAME"),
+                    to:  path.resolve(__dirname, "../yonyuan.github.io/docs"),
                 },
             ],
         }),

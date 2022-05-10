@@ -8,5 +8,7 @@ import Profile from "./Profile/Profile";
 
 const profile = new Profile()
 
+console.log(__dirname)
+
 
 

@@ -9,12 +9,12 @@ export default [
         name: "environmentMapTexture",
         type: "cubeTex",
         path: [
-            "textures/environmentMaps/0/px.jpg",
-            "textures/environmentMaps/0/nx.jpg",
-            "textures/environmentMaps/0/py.jpg",
-            "textures/environmentMaps/0/ny.jpg",
-            "textures/environmentMaps/0/pz.jpg",
-            "textures/environmentMaps/0/nz.jpg",
+            "static/textures/environmentMaps/0/px.jpg",
+            "static/textures/environmentMaps/0/nx.jpg",
+            "static/textures/environmentMaps/0/py.jpg",
+            "static/textures/environmentMaps/0/ny.jpg",
+            "static/textures/environmentMaps/0/pz.jpg",
+            "static/textures/environmentMaps/0/nz.jpg",
         ],
     },
 
@@ -22,37 +22,37 @@ export default [
     {
         name: "fox",
         type: "gltfModel",
-        path: "models/Fox/glTF/Fox.gltf",
+        path: "static/models/Fox/glTF/Fox.gltf",
     },
     {
         name: "monkey",
         type: "gltfModel",
-        path: "models/Monkey/Monkey.gltf",
+        path: "static/models/Monkey/Monkey.gltf",
     },
 
     {
         name: "atlas",
         type:"tex",
-        path: "textures/atlas/atlasMeta.png"
+        path: "static/textures/atlas/atlasMeta.png"
     },
     {
         name: "atlasNormal",
         type: "tex",
-        path: "textures/atlas/normal.png",
+        path: "static/textures/atlas/normal.png",
     },
     {
         name: "atlasDisplacement",
         type: "tex",
-        path: "textures/atlas/displacement.png",
+        path: "static/textures/atlas/displacement.png",
     },
     {
         name: "atlasOcclusion",
         type: "tex",
-        path: "textures/atlas/occlusion.png",
+        path: "static/textures/atlas/occlusion.png",
     },
     {
         name: "atlasRoughness",
         type: "tex",
-        path: "textures/atlas/roughness.png",
+        path: "static/textures/atlas/roughness.png",
     }
 ]
